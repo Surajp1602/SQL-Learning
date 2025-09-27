@@ -1,0 +1,37 @@
+/*
+
+This is Chapter: Two, in which I am going to learn about Data Definition Language (DDL) which is used for defining and managing database structure
+
+We will learn the following commands:
+     1. CREATE - Creating Tables
+     2. ALTER - Modifying Table Structure
+     3. DROP - Removing Tables
+
+*/
+
+/*
+----------------------------------------
+               CREATE
+----------------------------------------
+*/
+-- Create a new table called persons with columns: id, person_name, birth_date, and phone.
+CREATE TABLE persons (
+  id INT NOT NULL,
+  person_name VARCHAR(25) NOT NULL,
+  birth_date DATE,
+  phone_number VARCHAR(15)
+
+  CONSTRAINT pk_persons PRIMARY KEY(id)
+)
+
+/*
+----------------------------------------
+                ALTER
+----------------------------------------
+*/
+
+/*
+----------------------------------------
+                 DROP
+----------------------------------------
+*/
