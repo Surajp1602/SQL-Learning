@@ -1,5 +1,7 @@
 /*
 
+ DML Commands
+
 This is Chapter: Three, in which I am going to learn about Data Mqnipulation Language (DML) which is used for inserting, updating and deleting data in database tables.
 
 We will learn the following commands:
@@ -80,3 +82,4 @@ DELETE FROM persons
 
 -- Faster method to delete all rows, especially useful for large tables
 TRUNCATE TABLE persons
+
