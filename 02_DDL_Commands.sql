@@ -1,5 +1,7 @@
 /*
 
+ DDL Commands
+
 This is Chapter: Two, in which I am going to learn about Data Definition Language (DDL) which is used for defining and managing database structure
 
 We will learn the following commands:
