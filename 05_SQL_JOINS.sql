@@ -38,12 +38,11 @@ ON c.id = o.customer_id
 
 /*
 --------------------------------------
-            BASIC JOINS
+            LEFT JOIN
 --------------------------------------
 */
 
-/* Get all customers along with their orders, 
-   including those without orders */
+-- Get all customers along with their orders, including those without orders 
 SELECT
     c.id,
     c.first_name,
@@ -56,12 +55,11 @@ ON c.id = o.customer_id
 
 /*
 --------------------------------------
-            BASIC JOINS
+            RIGHT JOIN
 --------------------------------------
 */
 
-/* Get all customers along with their orders, 
-   including orders without matching customers */
+-- Get all customers along with their orders, including orders without matching customers 
 SELECT
     c.id,
     c.first_name,
@@ -74,12 +72,11 @@ ON c.id = o.customer_id
 
 /*
 --------------------------------------
-            BASIC JOINS
+      RIGHT JOIN using LEFT JOIN
 --------------------------------------
 */
 	
-/* Get all customers along with their orders, 
-   including orders without matching customers */
+-- Get all customers along with their orders, including orders without matching customers 
 SELECT
     c.id,
     c.first_name,
@@ -220,3 +217,4 @@ LEFT JOIN Sales.Products AS p
 ON o.ProductID = p.ProductID
 LEFT JOIN Sales.Employees AS e
 ON o.SalesPersonID = e.EmployeeID
+
