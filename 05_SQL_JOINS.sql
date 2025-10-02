@@ -2,7 +2,7 @@
 
  SQL JOINS
 
- This is Chapter: 5, in which I am going to learn about one of the most important topics in SQL - JOINS, which are used to combine data from multiple tables.
+ This is Chapter: Five, in which I am going to learn about one of the most important topics in SQL - JOINS, which are used to combine data from multiple tables.
 
  The contents:
 	 1. Basic Joins
@@ -217,4 +217,5 @@ LEFT JOIN Sales.Products AS p
 ON o.ProductID = p.ProductID
 LEFT JOIN Sales.Employees AS e
 ON o.SalesPersonID = e.EmployeeID
+
 
