@@ -73,7 +73,7 @@ FROM Sales.Employees;
 --------------------------------------
 */
 
--- TASK 1: Combine the data from Employees and Customers into one table using UNION 
+-- Combine the data from Employees and Customers into one table using UNION 
 
 SELECT
     FirstName,
@@ -91,14 +91,47 @@ FROM Sales.Employees;
 --------------------------------------
 */
 
+-- Combine the data from Employees and Customers into one table, including duplicates, using UNION ALL 
+SELECT
+    FirstName,
+    LastName
+FROM Sales.Customers
+UNION ALL
+SELECT
+    FirstName,
+    LastName
+FROM Sales.Employees;
+
 /*
 --------------------------------------
              INTERSECT
 --------------------------------------
 */
 
+-- Find employees who are also customers using INTERSECT 
+SELECT
+    FirstName,
+    LastName
+FROM Sales.Employees
+INTERSECT
+SELECT
+    FirstName,
+    LastName
+FROM Sales.Customers;
+
 /*
 --------------------------------------
               EXCEPT
 --------------------------------------
 */
+
+--Find employees who are NOT customers using EXCEPT 
+SELECT
+    FirstName,
+    LastName
+FROM Sales.Employees
+EXCEPT
+SELECT
+    FirstName,
+    LastName
+FROM Sales.Customers;
