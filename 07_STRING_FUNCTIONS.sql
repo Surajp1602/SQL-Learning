@@ -31,7 +31,6 @@ SELECT
     CONCAT(first_name, '-', country) AS full_info
 FROM customers
 
-
 /*
 --------------------------------------
              LOWER()
@@ -42,7 +41,6 @@ FROM customers
 SELECT 
     LOWER(first_name) AS lower_case_name
 FROM customers
-
 
 /*
 --------------------------------------
@@ -85,3 +83,63 @@ REPLACE('123-456-7890', '-', '/') AS clean_phone
 SELECT
 'report.txt' AS old_filename,
 REPLACE('report.txt', '.txt', '.csv') AS new_filename
+
+/*
+--------------------------------------
+              LEN()
+--------------------------------------
+*/
+
+-- Calculate the length of each customer's first name
+SELECT 
+    first_name, 
+    LEN(first_name) AS name_length
+FROM customers
+
+/*
+--------------------------------------
+           LEFT()
+--------------------------------------
+*/
+
+-- Retrieve the first two characters of each first name
+SELECT 
+    first_name,
+    LEFT(TRIM(first_name), 2) AS first_2_chars
+FROM customers
+
+/*
+--------------------------------------
+              RIGHT()
+--------------------------------------
+*/
+
+-- Retrieve the first two characters of each first name
+SELECT 
+    first_name,
+    LEFT(TRIM(first_name), 2) AS first_2_chars
+FROM customers
+
+/*
+--------------------------------------
+           SUBSTRING()
+--------------------------------------
+*/
+
+-- Retrieve a list of customers' first names after removing the first character
+SELECT 
+    first_name,
+    SUBSTRING(TRIM(first_name), 2, LEN(first_name)) AS trimmed_name
+FROM customers	
+
+/*
+--------------------------------------
+        NESTING FUNCTIONS
+--------------------------------------
+*/
+
+-- Nesting
+SELECT
+first_name, 
+UPPER(LOWER(first_name)) AS nesting
+FROM customers
