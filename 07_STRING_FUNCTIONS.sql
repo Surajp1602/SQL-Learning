@@ -2,7 +2,7 @@
 
  SQL SET OPERATIONS
 
- This is Chapter: Seven, in which I am going to learn about  SQL - STRING OPERATIONS, which enable you to manipulate, transform, and extract text data.
+ This is Chapter: Seven, in which I am going to learn about SQL - STRING OPERATIONS, which enable you to manipulate, transform, and extract text data.
 
  The contents:
 	    1. Manipulations
