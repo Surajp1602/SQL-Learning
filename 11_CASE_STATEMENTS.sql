@@ -1,30 +1,30 @@
 /*
 
-   SQL CASE Statement
+SQL CASE STATEMENT
 
-   This script demonstrates various use cases of the SQL CASE statement, including
-   data categorization, mapping, quick form syntax, handling nulls, and conditional 
-   aggregation.
+This is Chapter: ELEVEN, in which I am going to learn about SQL - CASE STATEMENTS.
    
-   Table of Contents:
+The contents:
      1. Categorize Data
      2. Mapping
      3. Quick Form of Case Statement
      4. Handling Nulls
      5. Conditional Aggregation
-=================================================================================
+
 */
 
-/* ==============================================================================
-   USE CASE: CATEGORIZE DATA
-===============================================================================*/
+/*
+--------------------------------------
+      USE CASE: CATEGORIZE DATA
+--------------------------------------
+*/
 
-/* TASK 1: 
-   Create a report showing total sales for each category:
+/* 
+Create a report showing total sales for each category:
 	   - High: Sales over 50
 	   - Medium: Sales between 20 and 50
 	   - Low: Sales 20 or less
-   The results are sorted from highest to lowest total sales.
+The results are sorted from highest to lowest total sales.
 */
 SELECT
     Category,
@@ -43,13 +43,13 @@ FROM (
 GROUP BY Category
 ORDER BY TotalSales DESC;
 
-/* ==============================================================================
-   USE CASE: MAPPING
-===============================================================================*/
-
-/* TASK 2: 
-   Retrieve customer details with abbreviated country codes 
+/*
+--------------------------------------
+        USE CASE: MAPPING
+--------------------------------------
 */
+ 
+-- Retrieve customer details with abbreviated country codes 
 SELECT
     CustomerID,
     FirstName,
@@ -62,13 +62,13 @@ SELECT
     END AS CountryAbbr
 FROM Sales.Customers;
 
-/* ==============================================================================
-   QUICK FORM SYNTAX
-===============================================================================*/
-
-/* TASK 3: 
-   Retrieve customer details with abbreviated country codes using quick form 
+/*
+--------------------------------------
+         QUICK FORM SYNTAX
+--------------------------------------
 */
+
+-- Retrieve customer details with abbreviated country codes using quick form 
 SELECT
     CustomerID,
     FirstName,
@@ -86,14 +86,14 @@ SELECT
     END AS CountryAbbr2
 FROM Sales.Customers;
 
-/* ==============================================================================
-   HANDLING NULLS
-===============================================================================*/
-
-/* TASK 4: 
-   Calculate the average score of customers, treating NULL as 0,
-   and provide CustomerID and LastName details.
+/*
+--------------------------------------
+         HANDLING NULLS
+--------------------------------------
 */
+
+
+-- Calculate the average score of customers, treating NULL as 0, and provide CustomerID and LastName details.
 SELECT
     CustomerID,
     LastName,
@@ -111,13 +111,13 @@ SELECT
     AVG(Score) OVER () AS AvgCustomer
 FROM Sales.Customers;
 
-/* ==============================================================================
-   CONDITIONAL AGGREGATION
-===============================================================================*/
-
-/* TASK 5: 
-   Count how many orders each customer made with sales greater than 30 
+/*
+--------------------------------------
+      CONDITIONAL AGGREGATION
+--------------------------------------
 */
+
+-- Count how many orders each customer made with sales greater than 30 
 SELECT
     CustomerID,
     SUM(
