@@ -2,7 +2,7 @@
 
 SQL Aggregation Functions
 
-This is Chapter: Thirteen, in which I am going to learn about various Aggregation Functions.
+This is Chapter: Twelve, in which I am going to learn about various Aggregation Functions.
 
 The contents:
 	1. COUNT
