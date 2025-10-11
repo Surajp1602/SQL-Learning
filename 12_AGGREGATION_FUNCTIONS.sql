@@ -62,3 +62,4 @@ FROM Sales.Customers
 -- Find the lowest score among the customers.
 SELECT MIN(Score) AS LowestScore
 FROM Sales.Customers
+
