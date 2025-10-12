@@ -217,5 +217,3 @@ LEFT JOIN Sales.Products AS p
 ON o.ProductID = p.ProductID
 LEFT JOIN Sales.Employees AS e
 ON o.SalesPersonID = e.EmployeeID
-
-
