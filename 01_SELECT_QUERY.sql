@@ -194,3 +194,4 @@ ORDER BY score DESC
 SELECT TOP 2 *
 FROM customers
 ORDER BY score ASC
+
