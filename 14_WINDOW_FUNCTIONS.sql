@@ -2,8 +2,7 @@
 
 WINDOW AGGREGATION
 
-This is Chapter: Fourteen, in which I am going to learn about basics of Window Aggregations.
-
+This is Chapter: Thirteen, in which I am going to learn about basics of Window Aggregations.
 
 */
 
@@ -26,3 +25,4 @@ SELECT
 	ProductID,
 	SUM(Sales) OVER(PARTITION BY ProductID) AS TotalSales
 FROM Sales.Orders
+
