@@ -25,4 +25,3 @@ SELECT
 	ProductID,
 	SUM(Sales) OVER(PARTITION BY ProductID) AS TotalSales
 FROM Sales.Orders
-
