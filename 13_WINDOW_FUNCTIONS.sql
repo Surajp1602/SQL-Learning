@@ -14,7 +14,7 @@ FROM Sales.Orders
 -- Find the total sales for each product.
 SELECT
 	ProductID,
-	SUM(Sales) AS TotalSales
+	SUM(Sales) AS Total_Sales
 FROM Sales.Orders
 GROUP BY ProductID
 
@@ -25,3 +25,4 @@ SELECT
 	ProductID,
 	SUM(Sales) OVER(PARTITION BY ProductID) AS TotalSales
 FROM Sales.Orders
+
